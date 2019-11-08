@@ -30,5 +30,8 @@ int main()
 	M = 25.0;
 	
 	int n;
-	n = floor ((Lp - Fp) / S + 1.0);
+	n = float ((Lp - Fp) / S + 1.0);
+
+    cout << n;
+    cout << M;
 }
