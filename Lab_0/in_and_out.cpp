@@ -14,5 +14,5 @@ int main()
     cout << "Skriv in fem heltal: ";
     cin >> a >> b >> c >> d >> e;
     cout << "Du skrev in talen: " << setw(2) << a << b << c << d << e << endl << '\n';
-    
+
 }
