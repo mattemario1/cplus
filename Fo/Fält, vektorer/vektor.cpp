@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
     vector <int> v_2{1, 2, 3, 4};
     vector <int> v_3{v_2};
     v_2.at(3) = 5;  //sista värdet i v_2 blir 5
-    //v_2[10] = 10;     går att göra men borde inte göras
+    v_2[10] = 10;     går att göra men borde inte göras
     for (int i{}; i < v_2.size(); ++i)
     {
         cout << v_2.at(i) << endl;

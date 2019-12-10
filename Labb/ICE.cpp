@@ -24,11 +24,9 @@ int main()
                 cout << "| ";
             if (rndNumbers.at(u) < 0)
                 cout << "  ";
-            rndNumbers.at(u) -= 1;  
+            rndNumbers.at(u) -= 1;
         }
         cout << endl;
     }
     return 0;
 }
-
-
