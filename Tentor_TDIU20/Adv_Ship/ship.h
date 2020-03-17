@@ -1,14 +1,16 @@
 #include <string>
+#include <ostream>
 
 #ifndef TIME_H
 #define TIME_H
 
 
-class ship
+class Ship
 {
 public:
-    virtual ~ship() = default;
-    ship(std::string const& name, int const& weight);
+    virtual ~Ship() = default;
+    Ship(std::string const& name, int const& weight);
+    std::string print_string() const;
     virtual int get_power() const = 0;
 protected:
     std::string name;
@@ -16,24 +18,26 @@ protected:
 };
 
 
-class CargoShip: public ship
+class CargoShip: public Ship
 {
 public:
-    Cargoship(std::string const& name, int const& weight, int const& cargo_capacity);
+    CargoShip(std::string const& name, int const& weight, int const& cargo_capacity);
     int get_power() const override;
 private:
     int cargo_capacity;
 };
 
 
-class WarShip: public ship
+class WarShip: public Ship
 {
 public:
-    Warship(std::string const& name, int const& weight, int const& guns);
+    WarShip(std::string const& name, int const& weight, int const& guns);
     int get_power() const override;
 private:
     int guns;
 };
+
+
 
 
 #endif

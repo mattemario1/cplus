@@ -5,12 +5,12 @@
 
 Queue::Queue() : first{nullptr} {}
 
-~Queue()
+Queue::~Queue()
 {
     delete first;
 }
 
-~Task()
+Queue::Task::~Task()
 {
     delete next;
 }
@@ -81,18 +81,23 @@ Queue Queue::operator = (Queue const& rhs)
     if (rhs.first == nullptr)
     {
         first = nullptr;
+        std::cout << "foo" << std::endl;
     }
     else
     {
         while (first -> next)
         {
             dequeue();
+            std::cout << "faa" << std::endl;
+
         }
         Task* rhs_curr{rhs.first};
         while (rhs_curr -> next)
         {
             enqueue(rhs_curr -> task);
             rhs_curr = rhs_curr -> next;
+            std::cout << "fii" << std::endl;
+
         }
     }
     return *this;
@@ -108,7 +113,7 @@ Queue::Queue(Queue &&rhs) : Queue()
 Queue Queue::operator = (Queue &&rhs)
 {
     std::swap(first, rhs.first);
-    rhs.~Queue():
+    rhs.~Queue();
     rhs.first = nullptr;
     return *this;
 }

@@ -10,7 +10,10 @@ void print_fleet(string const& name, vector<Ship> fleet)
     cout << "name: " << name << "\n";
     unsigned int power{};
 
-    //add the fleets power to power
+    // for (Ship* p: fleet)
+    // {
+    //     power += p.get_power();
+    // }
 
     cout << "Total power: " << power << "\n";
 

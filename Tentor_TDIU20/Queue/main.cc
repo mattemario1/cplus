@@ -17,5 +17,8 @@ int main()
     queue.execute();
     cout << queue.to_string() << endl;
 
+    Queue queue2{queue};
+    //cout << queue2.to_string() << endl;
+
 
 }

@@ -2,13 +2,13 @@ using namespace std;
 
 #include "ship.h"
 
-ship::ship(string const& n, int const& w): name{n}, weight{w}
+Ship::Ship(string const& n, int const& w): name{n}, weight{w}
 {}
 
-CargoShip::Cargoship(string const& n, int const& w, int const& c): ship{n, w}, cargo_capacity{c}
+CargoShip::CargoShip(string const& n, int const& w, int const& c): Ship{n, w}, cargo_capacity{c}
 {}
 
-WarShip::Warship(string const& n, int const& w, int const& g): ship{n, w}, guns{g}
+WarShip::WarShip(string const& n, int const& w, int const& g): Ship{n, w}, guns{g}
 {}
 
 int CargoShip::get_power() const
@@ -19,4 +19,9 @@ int CargoShip::get_power() const
 int WarShip::get_power() const
 {
     return weight * guns;
+}
+
+string Ship::print_string() const
+{
+    return "name: " + name + ", weight:" +  to_string(weight);
 }
