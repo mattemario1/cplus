@@ -1,0 +1,4 @@
++ OOP
+    * CRS-kort -> beskriver objekt-struktur
+    * + betyder publika props och - betyder privata props
+    * 
